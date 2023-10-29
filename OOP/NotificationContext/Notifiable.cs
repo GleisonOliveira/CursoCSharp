@@ -1,7 +1,8 @@
-using OOP.NotificationContext;
-
-namespace POO.ContentContext
+namespace OOP.NotificationContext
 {
+    /// <summary>
+    /// Define an objet as a notifiable
+    /// </summary>
     public abstract class Notifiable : INotifiable
     {
         public List<INotification> Notifications { get; set; } = new List<INotification>();

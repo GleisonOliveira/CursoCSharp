@@ -1,4 +1,4 @@
-namespace POO.ContentContext.Enums
+namespace OOP.ContentContext.Enums
 {
     public enum EContentLevel
     {

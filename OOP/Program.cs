@@ -1,6 +1,18 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using OOP.ContentContext;
-using POO.ContentContext;
+using Microsoft.Extensions.DependencyInjection;
+using OOP.WriterContext;
 
-Console.WriteLine("Hello, World!");
-var e = new CareerItem(2, "null", "null", new Course("t", "d"));
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        var services = new ServiceCollection();
+
+        services
+            .AddSingleton<IWriterFactory, WriterFactory>()
+            .AddSingleton<EntryPoint, EntryPoint>()
+            .BuildServiceProvider()
+            .GetService<EntryPoint>()
+            ?.Start(args);
+    }
+}

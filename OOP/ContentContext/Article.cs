@@ -1,5 +1,3 @@
-using POO.ContentContext;
-
 namespace OOP.ContentContext
 {
     public class Article : Content

@@ -1,6 +1,4 @@
-using OOP.NotificationContext;
-
-namespace POO.ContentContext
+namespace OOP.NotificationContext
 {
     /// <summary>
     /// Define the class as notifiable and able to be notifiable
