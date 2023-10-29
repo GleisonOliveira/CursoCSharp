@@ -4,12 +4,14 @@ namespace OOP.ContentContext
 {
     public class Career : Content
     {
-        public int TotalCourses => Items.Count;
-        public IList<CareerItem> Items { get; set; }
+        public int TotalCourses => Careers.Count;
+        public IList<CareerItem> Careers { get; set; }
 
-        public Career(string title, string url) : base(title, url)
+        public int DurationInMinutes => Careers.Sum(x => x.Course.DurationInMinutes);
+
+        public Career(string title, string url, IList<CareerItem> careers) : base(title, url)
         {
-            Items = new List<CareerItem>();
+            Careers = careers;
         }
     }
 }

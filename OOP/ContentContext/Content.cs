@@ -1,8 +1,9 @@
 using OOP.NotificationContext;
+using OOP.SharedContext;
 
 namespace OOP.ContentContext
 {
-    public abstract class Content : ContentBase
+    public abstract class Content : Base
     {
         public Content(string title, string url)
         {
