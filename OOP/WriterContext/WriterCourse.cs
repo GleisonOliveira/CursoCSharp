@@ -5,7 +5,7 @@ namespace OOP.WriterContext
     /// <summary>
     /// Write a the couses on screen
     /// </summary>
-    public class WriterCourse : WriterBase<CareerItem>
+    internal class WriterCourse : WriterBase<CareerItem>
     {
         public override void Write(IEnumerable<CareerItem> careerItems)
         {

@@ -5,7 +5,7 @@ namespace OOP.WriterContext
     /// <summary>
     /// Get a factory based on type
     /// </summary>
-    public class WriterFactory : IWriterFactory
+    internal class WriterFactory : IWriterFactory
     {
         /// <summary>
         /// Get the writer based on type

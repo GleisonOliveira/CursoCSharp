@@ -3,7 +3,7 @@ using OOP.SharedContext;
 
 namespace OOP.ContentContext
 {
-    public class CareerItem : Base
+    internal class CareerItem : Base
     {
         public CareerItem(string title, Course course, string? description = null, int ordem = 1)
         {

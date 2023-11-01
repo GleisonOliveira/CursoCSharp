@@ -3,7 +3,7 @@ using OOP.SharedContext;
 
 namespace OOP.SubscriptionContext
 {
-    public class User : Base
+    internal class User : Base
     {
         public User(string username, string password)
         {

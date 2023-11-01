@@ -2,7 +2,7 @@
 using OOP.ContentContext.Enums;
 using OOP.WriterContext;
 
-public class EntryPoint
+internal class EntryPoint
 {
     public IWriterFactory _writerFactory;
 
@@ -26,7 +26,7 @@ public class EntryPoint
         };
 
         var career = new Career("Desenvoledor", "desenvolvedor", careerItems);
-        
+
         var careers = new List<Career>
         {
             career

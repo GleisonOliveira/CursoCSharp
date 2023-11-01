@@ -2,7 +2,7 @@ using OOP.SharedContext;
 
 namespace OOP.ContentContext
 {
-    public class Module : Base
+    internal class Module : Base
     {
         public int Order { get; set; } = 1;
         public string Title { get; set; } = null!;

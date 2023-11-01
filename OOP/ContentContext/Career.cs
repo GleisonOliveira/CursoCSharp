@@ -1,6 +1,6 @@
 namespace OOP.ContentContext
 {
-    public class Career : Content
+    internal class Career : Content
     {
         public int TotalCourses => Careers.Count;
         public IList<CareerItem> Careers { get; set; }

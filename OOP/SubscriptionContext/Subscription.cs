@@ -2,7 +2,7 @@ using OOP.SharedContext;
 
 namespace OOP.SubscriptionContext
 {
-    public class Subscription : Base
+    internal class Subscription : Base
     {
         public Plan Plan { get; set; }
         public User User { get; set; }

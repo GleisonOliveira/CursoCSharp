@@ -5,7 +5,7 @@ namespace OOP.WriterContext
     /// <summary>
     /// Write the lectures on screen
     /// </summary>
-    public class WriterLecture : WriterBase<Lecture>
+    internal class WriterLecture : WriterBase<Lecture>
     {
         public override void Write(IEnumerable<Lecture> lectures)
         {

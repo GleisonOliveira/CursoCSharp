@@ -2,7 +2,7 @@ using OOP.ContentContext.Enums;
 
 namespace OOP.ContentContext
 {
-    public class Course : Content
+    internal class Course : Content
     {
         public string Tag { get; set; } = string.Empty;
         public IList<Module> Modules { get; set; }

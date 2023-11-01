@@ -5,7 +5,7 @@ namespace OOP.WriterContext
     /// <summary>
     /// Write the modules on screen
     /// </summary>
-    public class WriterModule : WriterBase<Module>
+    internal class WriterModule : WriterBase<Module>
     {
         public override void Write(IEnumerable<Module> modules)
         {
