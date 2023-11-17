@@ -12,17 +12,15 @@ namespace PaymentContext.Domain.Entities.ValueObjects
             Number = Regex.Replace(number, @"\D", "");
             Type = type;
 
-            AddNotifications(
-                new Contract<Document>()
+            AddNotifications(new Contract<Document>()
                 .Requires()
-                .IsTrue(Validate(), "Document.Number", "Documento inválido")
-            );
+                .IsTrue(ValidateDocument(), "Document.Number", "Documento inválido"));
         }
 
         public string Number { get; private set; }
         public EDocumentType Type { get; private set; }
 
-        private bool Validate()
+        private bool ValidateDocument()
         {
             if (Type == EDocumentType.CPF && Number.Length == 11)
             {

@@ -11,7 +11,7 @@ public class StudentTests
     private static readonly Document _doc = new("280.611.800-06");
     private static readonly Email _email = new("email@valid.com");
 
-    private static Address _address = new("Street", 200, "Neighborhood", "City", "SP", "BR", "00000000");
+    private static Address _address = new("Street", "200", "Neighborhood", "City", "SP", "BR", "00000000");
 
     private static readonly PayPalPayment _payment = new("123", DateTime.Now, DateTime.Now.AddHours(1), 10, 10, _address, _doc, "Payer", _email);
 
@@ -44,6 +44,17 @@ public class StudentTests
     {
         var student = new Student(_name, _doc, _email);
         _subscription.AddPayment(_payment);
+        _subscription.AddPayment(_payment);
+
+        student.AddSubscription(_subscription);
+        
+        Assert.IsTrue(student.IsValid);
+    }
+
+    [TestMethod]
+    public void ShouldReturnSuccessWhenAddSubscription()
+    {
+        var student = new Student(_name, _doc, _email);
         _subscription.AddPayment(_payment);
 
         student.AddSubscription(_subscription);

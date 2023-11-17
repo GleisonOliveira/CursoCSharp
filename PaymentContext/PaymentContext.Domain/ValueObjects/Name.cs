@@ -10,13 +10,11 @@ namespace PaymentContext.Domain.Entities.ValueObjects
             FirstName = firstName;
             LastName = lastName;
 
-            AddNotifications(
-                new Contract<Name>()
+            AddNotifications(new Contract<Name>()
                 .Requires()
-                .IsGreaterOrEqualsThan(firstName, 3, "Name.FirstName", "O Nome deve contem pelo menos 3 caracteres")
-                .IsGreaterOrEqualsThan(lastName, 3, "Name.LastName", "O Sobrenome deve contem pelo menos 3 caracteres")
-                .IsLowerOrEqualsThan(lastName, 40, "Name.LastName", "O Sobrenome deve contem pelo menos 40 caracteres")
-            );
+                .IsGreaterOrEqualsThan(FirstName, 3, "Name.FirstName", "O Nome deve contem pelo menos 3 caracteres")
+                .IsGreaterOrEqualsThan(LastName, 3, "Name.LastName", "O Sobrenome deve contem pelo menos 3 caracteres")
+                .IsLowerOrEqualsThan(LastName, 40, "Name.LastName", "O Sobrenome deve contem pelo menos 40 caracteres"));
         }
 
         public string FirstName { get; private set; }

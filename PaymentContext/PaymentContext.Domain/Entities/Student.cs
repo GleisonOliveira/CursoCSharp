@@ -44,3 +44,4 @@ public class Student : Entity
         _subscriptions.Add(subscription);
     }
 }
+
