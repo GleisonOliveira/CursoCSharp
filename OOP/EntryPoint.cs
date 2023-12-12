@@ -35,6 +35,8 @@ internal class EntryPoint
         var careerWriter = _writerFactory.GetWriter<Career>();
         careerWriter.OnWrite += OnWriteCarrersEvent;
         careerWriter.Write(careers);
+
+        Console.ReadKey();
     }
 
     /// <summary>
